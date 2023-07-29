@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800&display=swap"
         rel="stylesheet">
-        
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
     <!-- External Libraries -->
     <style>
         body {
@@ -156,7 +155,7 @@
             <div class="center" style="margin-top: 120px;">
                 <select name="" id="cities"
                     style="width: 300px; height: 45px; font-size: 25px; font-family: 'Tajawal', sans-serif; background-color: rgb(44, 39, 39); color: white; padding: 5px; border-radius: 20px;">
-                   
+
                 </select>
             </div>
             <!--//change city select //-->
@@ -195,21 +194,21 @@
     }
 
     document.getElementById("cities").addEventListener("change", function () {
-        document.getElementById("city-name").innerHTML = document.getElementById("cities").value
+        document.getElementById("city-name").innerHTML = this.value
         let cityName = ""
-        for(let city of cities){
-            if(city.arabicName == this.value){
+        for (let city of cities) {
+            if (city.arabicName == this.value) {
                 cityName = city.name
             }
         }
         getPrayersTimingsOfCity(cityName)
-        
+
     })
 
     function getPrayersTimingsOfCity(cityName) {
         let parameters = {
             "country": "SA",
-            "city": cityName 
+            "city": cityName
         }
 
         axios.get('https://api.aladhan.com/v1/timingsByCity', {
