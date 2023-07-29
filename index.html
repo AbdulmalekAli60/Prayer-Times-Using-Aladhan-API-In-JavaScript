@@ -72,7 +72,7 @@
         <div style="margin-top: 100px;">
             <!-- city name -->
             <div style="color: white; margin-right: 40px;">
-                <h1 id="city-name"></h1>
+                <h1 id="city-name">الرياض</h1>
                 <h6 style="font-size: 40px; font-weight: 200;" id="date">الجمعة 24 نوفمبر</h6>
             </div>
             <!--// city name //-->
@@ -195,7 +195,7 @@
     }
 
     document.getElementById("cities").addEventListener("change", function () {
-        document.getElementById("city-name").innerHTML = this.value
+        document.getElementById("city-name").innerHTML = document.getElementById("cities").value
         let cityName = ""
         for(let city of cities){
             if(city.arabicName == this.value){
