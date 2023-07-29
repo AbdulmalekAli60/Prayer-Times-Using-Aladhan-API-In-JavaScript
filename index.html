@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>اوقات الصلاة</title>
     <!-- External Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@
         <div style="margin-top: 100px;">
             <!-- city name -->
             <div style="color: white; margin-right: 40px;">
-                <h1 id="city-name">ال</h1>
+                <h1 id="city-name"></h1>
                 <h6 style="font-size: 40px; font-weight: 200;" id="date">الجمعة 24 نوفمبر</h6>
             </div>
             <!--// city name //-->
@@ -189,7 +189,7 @@
     ]
     for (let city of cities) {
         const content = `
-            <option value="" >${city.arabicName}</option>
+            <option>${city.arabicName}</option>
             `
         document.getElementById("cities").innerHTML += content
     }
